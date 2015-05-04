@@ -14,6 +14,8 @@
 		39AAE8A51AF7EBD80085691E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AAE8A41AF7EBD80085691E /* Images.xcassets */; };
 		39AAE8A81AF7EBD80085691E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39AAE8A61AF7EBD80085691E /* LaunchScreen.xib */; };
 		39AAE8B41AF7EBD80085691E /* BikeShareAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8B31AF7EBD80085691E /* BikeShareAppTests.m */; };
+		39AAE8C31AF7ECDF0085691E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8C21AF7ECDF0085691E /* MapViewController.m */; };
+		39AAE8C61AF7F0A80085691E /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8C51AF7F0A80085691E /* MoreInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		39AAE8AD1AF7EBD80085691E /* BikeShareAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeShareAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39AAE8B21AF7EBD80085691E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39AAE8B31AF7EBD80085691E /* BikeShareAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeShareAppTests.m; sourceTree = "<group>"; };
+		39AAE8C11AF7ECDF0085691E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		39AAE8C21AF7ECDF0085691E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		39AAE8C41AF7F0A80085691E /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
+		39AAE8C51AF7F0A80085691E /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 		39AAE88B1AF7EBD80085691E = {
 			isa = PBXGroup;
 			children = (
+				39AAE8BD1AF7EC760085691E /* Model */,
+				39AAE8C01AF7EC9D0085691E /* View */,
+				39AAE8BF1AF7EC8F0085691E /* Controller */,
 				39AAE8961AF7EBD80085691E /* BikeShareApp */,
 				39AAE8B01AF7EBD80085691E /* BikeShareAppTests */,
 				39AAE8951AF7EBD80085691E /* Products */,
@@ -117,6 +126,31 @@
 				39AAE8B21AF7EBD80085691E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39AAE8BD1AF7EC760085691E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		39AAE8BF1AF7EC8F0085691E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39AAE8C11AF7ECDF0085691E /* MapViewController.h */,
+				39AAE8C21AF7ECDF0085691E /* MapViewController.m */,
+				39AAE8C41AF7F0A80085691E /* MoreInfoViewController.h */,
+				39AAE8C51AF7F0A80085691E /* MoreInfoViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		39AAE8C01AF7EC9D0085691E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39AAE8C61AF7F0A80085691E /* MoreInfoViewController.m in Sources */,
 				39AAE8A01AF7EBD80085691E /* ViewController.m in Sources */,
 				39AAE89D1AF7EBD80085691E /* AppDelegate.m in Sources */,
 				39AAE89A1AF7EBD80085691E /* main.m in Sources */,
+				39AAE8C31AF7ECDF0085691E /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
