@@ -16,6 +16,7 @@
 		39AAE8B41AF7EBD80085691E /* BikeShareAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8B31AF7EBD80085691E /* BikeShareAppTests.m */; };
 		39AAE8C31AF7ECDF0085691E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8C21AF7ECDF0085691E /* MapViewController.m */; };
 		39AAE8C61AF7F0A80085691E /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8C51AF7F0A80085691E /* MoreInfoViewController.m */; };
+		39AAE8CD1AF806F90085691E /* HTTPCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8CC1AF806F90085691E /* HTTPCommunication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		39AAE8C21AF7ECDF0085691E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		39AAE8C41AF7F0A80085691E /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
 		39AAE8C51AF7F0A80085691E /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
+		39AAE8CB1AF806F90085691E /* HTTPCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPCommunication.h; sourceTree = "<group>"; };
+		39AAE8CC1AF806F90085691E /* HTTPCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPCommunication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 		39AAE8BD1AF7EC760085691E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39AAE8CB1AF806F90085691E /* HTTPCommunication.h */,
+				39AAE8CC1AF806F90085691E /* HTTPCommunication.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			files = (
 				39AAE8C61AF7F0A80085691E /* MoreInfoViewController.m in Sources */,
 				39AAE8A01AF7EBD80085691E /* ViewController.m in Sources */,
+				39AAE8CD1AF806F90085691E /* HTTPCommunication.m in Sources */,
 				39AAE89D1AF7EBD80085691E /* AppDelegate.m in Sources */,
 				39AAE89A1AF7EBD80085691E /* main.m in Sources */,
 				39AAE8C31AF7ECDF0085691E /* MapViewController.m in Sources */,

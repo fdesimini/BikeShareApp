@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTTPCommunication.h"
+#import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate>
+
+@property (nonatomic, strong) MKMapView *mapView;
+
+//implement HTTPCommunication here
+
+
 
 @end
