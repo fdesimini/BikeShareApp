@@ -22,6 +22,8 @@
     _mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
    [self.view addSubview:_mapView];
    
+    //This is where we focus on the users location
+    
     self.mapView.delegate = self;
     self.locationManager = [[CLLocationManager alloc]init];
       
@@ -32,10 +34,29 @@
     }
     [self.locationManager startUpdatingLocation];
     
+    //This reports all movement
+    [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
+    //defines the accuracy of the location you want
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
     self.mapView.showsUserLocation = YES;
     self.mapView.showsPointsOfInterest = YES;
 
 }
+
+//This implementation allows you to zoom in on the map after launch
+//didAddAnnotationViews is one of the delegate methods of the MKMapViewDelegate
+
+-(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
+{
+    MKAnnotationView *annotationView = [views objectAtIndex:0];
+    id<MKAnnotation> mp=[annotationView annotation];
+    MKCoordinateRegion region=MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
+    
+    [mapView setRegion:region animated:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

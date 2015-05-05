@@ -13,11 +13,13 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>
 
-//implement HTTPCommunication here
 
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+
+//implement HTTPCommunication here
+@property (strong, nonatomic) HTTPCommunication *http;
 
 
 @end
