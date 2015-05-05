@@ -17,19 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     // this is where we will initilialize the mapView Object and add the subview
     _mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:_mapView];
- 
-    
+   [self.view addSubview:_mapView];
+   
     self.mapView.delegate = self;
     self.locationManager = [[CLLocationManager alloc]init];
-    
-    if (IS_OS_8_OR_LATER) {
+      
+    if (IS_OS_8_OR_LATER)
+    {
         [self.locationManager requestWhenInUseAuthorization];
         [self.locationManager requestAlwaysAuthorization];
     }
-    
     [self.locationManager startUpdatingLocation];
     
     self.mapView.showsUserLocation = YES;
