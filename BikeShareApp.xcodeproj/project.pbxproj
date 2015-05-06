@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		396D4BF21AF9022C004FD0D2 /* Pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 396D4BF11AF9022C004FD0D2 /* Pikachu.png */; };
-		396D4BF51AF948A6004FD0D2 /* BikeShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 396D4BF41AF948A6004FD0D2 /* BikeShare.m */; };
 		3989F68B1AFA516E00E4CC2D /* BikeShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3989F68A1AFA516E00E4CC2D /* BikeShareData.m */; };
 		39AAE89A1AF7EBD80085691E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE8991AF7EBD80085691E /* main.m */; };
 		39AAE89D1AF7EBD80085691E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE89C1AF7EBD80085691E /* AppDelegate.m */; };
@@ -36,8 +35,6 @@
 
 /* Begin PBXFileReference section */
 		396D4BF11AF9022C004FD0D2 /* Pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pikachu.png; sourceTree = "<group>"; };
-		396D4BF31AF948A6004FD0D2 /* BikeShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeShare.h; sourceTree = "<group>"; };
-		396D4BF41AF948A6004FD0D2 /* BikeShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeShare.m; sourceTree = "<group>"; };
 		3989F6891AFA516E00E4CC2D /* BikeShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeShareData.h; sourceTree = "<group>"; };
 		3989F68A1AFA516E00E4CC2D /* BikeShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeShareData.m; sourceTree = "<group>"; };
 		39AAE8941AF7EBD80085691E /* BikeShareApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeShareApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,8 +150,6 @@
 			children = (
 				39AAE8CB1AF806F90085691E /* HTTPCommunication.h */,
 				39AAE8CC1AF806F90085691E /* HTTPCommunication.m */,
-				396D4BF31AF948A6004FD0D2 /* BikeShare.h */,
-				396D4BF41AF948A6004FD0D2 /* BikeShare.m */,
 				3989F6891AFA516E00E4CC2D /* BikeShareData.h */,
 				3989F68A1AFA516E00E4CC2D /* BikeShareData.m */,
 			);
@@ -286,7 +281,6 @@
 				39AAE8CD1AF806F90085691E /* HTTPCommunication.m in Sources */,
 				39AAE89D1AF7EBD80085691E /* AppDelegate.m in Sources */,
 				39AAE89A1AF7EBD80085691E /* main.m in Sources */,
-				396D4BF51AF948A6004FD0D2 /* BikeShare.m in Sources */,
 				39AAE8C31AF7ECDF0085691E /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

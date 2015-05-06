@@ -47,7 +47,7 @@
     self.mapView.showsUserLocation = YES;
     self.mapView.showsPointsOfInterest = YES;
 
-
+    //NEED this to
     _getBikeShareData = [[BikeShareData alloc]init];
     
 }
