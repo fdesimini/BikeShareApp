@@ -5,12 +5,10 @@
 //  Created by Frank Desimini on 2015-05-06.
 //  Copyright (c) 2015 Eff Dee Productions. All rights reserved.
 //
-
+#import <Foundation/Foundation.h>
 #import "HTTPCommunication.h"
 
-@interface BikeShareData : HTTPCommunication
-
-@property (strong, nonatomic) HTTPCommunication *http;
+@interface BikeShareData : NSObject
 
 @property (strong, nonatomic) NSNumber *stationId;
 @property (strong, nonatomic) NSString *stationName;
@@ -20,6 +18,9 @@
 @property (strong, nonatomic) NSNumber *latitude;
 @property (strong, nonatomic) NSNumber *longitude;
 
--(void)getData:(id)sender;
+@property (strong,nonatomic) HTTPCommunication *http;
+
+
+-(void)getData;
 
 @end

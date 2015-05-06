@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 
+
 @interface MapViewController ()
 
 @end
@@ -47,6 +48,8 @@
     self.mapView.showsPointsOfInterest = YES;
 
 
+    _getBikeShareData = [[BikeShareData alloc]init];
+    
 }
 
 //This implementation allows you to zoom in on the map after launch
