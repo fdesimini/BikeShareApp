@@ -16,7 +16,7 @@
     // persisting given successBlock for calling it later
     self.successBlock = successBlock;
     
-    // creating the request using the given url
+    // creating the request using the given url (this is the url we will be passing to the method)
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
    
     // creating a session using the default configuration and setting our instance as delegate (defining the behaviour of this session)

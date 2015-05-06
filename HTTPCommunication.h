@@ -20,6 +20,7 @@
 -(void)retrievURL:(NSURL *)url successBlock:(void(^)(NSData *))successBlock;
 /*
  Task has finished downloading delegate method
+ This is a delegate meethod we get from NSURLSessionDownloadDelegate
  */
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location;
 

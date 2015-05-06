@@ -23,8 +23,8 @@
     MapViewController *mapViewController = [[MapViewController alloc]init];
     mapViewController.title = @"Bike Maps";
     mapViewController.view.backgroundColor = [UIColor orangeColor];
-    mapViewController.tabBarItem.image = [UIImage imageNamed:@"map_icon_30"];
-    [mapViewController.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+ // mapViewController.tabBarItem.image = [UIImage imageNamed:@"map_icon_30"];
+ // [mapViewController.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     
     //MoreInfoViewController - this is where we will have "more info"
@@ -38,7 +38,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     self.window.rootViewController = tabBarController;
     
-    
+
     
     return YES;
 }

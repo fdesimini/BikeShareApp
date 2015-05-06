@@ -18,6 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //self.tabbar image imagwithrendering
+    UIImage *mapIcon = [UIImage imageNamed:@"map_icon_30"];
+    [self.tabBarItem.image = mapIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     // this is where we will initilialize the mapView Object and add the subview
     _mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
    [self.view addSubview:_mapView];
@@ -41,6 +45,7 @@
     
     self.mapView.showsUserLocation = YES;
     self.mapView.showsPointsOfInterest = YES;
+
 
 }
 

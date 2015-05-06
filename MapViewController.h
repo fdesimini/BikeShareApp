@@ -18,8 +18,4 @@
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
-//implement HTTPCommunication here
-@property (strong, nonatomic) HTTPCommunication *http;
-
-
 @end
