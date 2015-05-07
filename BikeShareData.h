@@ -11,17 +11,17 @@
 
 @interface BikeShareData : NSObject
 
-@property (strong, nonatomic) NSNumber *stationId;
-@property (strong, nonatomic) NSString *stationName;
-@property (strong, nonatomic) NSString *statusValue;
-@property (strong, nonatomic) NSNumber *availableDocks;
-@property (strong, nonatomic) NSNumber *totalDocks;
-@property (strong, nonatomic) NSNumber *latitude;
-@property (strong, nonatomic) NSNumber *longitude;
+//@property (strong, nonatomic) NSNumber *stationId;
+//@property (strong, nonatomic) NSString *stationName;
+//@property (strong, nonatomic) NSString *statusValue;
+//@property (strong, nonatomic) NSNumber *availableDocks;
+//@property (strong, nonatomic) NSNumber *totalDocks;
+//@property (strong, nonatomic) NSNumber *latitude;
+//@property (strong, nonatomic) NSNumber *longitude;
 
 @property (strong,nonatomic) HTTPCommunication *http;
 
 
--(void)getData;
+-(void)getDataOnSuccess:(void (^)(NSArray *stations))success;
 
 @end

@@ -57,22 +57,33 @@
 //    [self.mapView addAnnotation:self.annotation];
 //    //configure annotation
 //    [self.mapView setCenterCoordinate:self.annotation.coordinate animated:YES];
-  
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
+    [_getBikeShareData getDataOnSuccess:^(NSArray *stations) {
+        for (Annotation *annotation in stations)
+        {
+            [self.mapView addAnnotation:annotation];
+        }
+    }];
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        id<MKAnnotation> mp = self.mapView.userLocation;
+        MKCoordinateRegion region=MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
+        
+        [self.mapView setRegion:region animated:YES];
+    });
 }
 
 //This implementation allows you to zoom in on the map after launch
 //didAddAnnotationViews is one of the delegate methods of the MKMapViewDelegate
-
--(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
-{
-    MKAnnotationView *annotationView = [views objectAtIndex:0];
-    id<MKAnnotation> mp=[annotationView annotation];
-    MKCoordinateRegion region=MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
-    
-    [mapView setRegion:region animated:YES];
-}
 
 
 

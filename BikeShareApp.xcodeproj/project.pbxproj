@@ -155,6 +155,8 @@
 				39AAE8CC1AF806F90085691E /* HTTPCommunication.m */,
 				3989F6891AFA516E00E4CC2D /* BikeShareData.h */,
 				3989F68A1AFA516E00E4CC2D /* BikeShareData.m */,
+				39ADE0AC1AFAB46D009E0935 /* Annotation.h */,
+				39ADE0AD1AFAB46D009E0935 /* Annotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,8 +175,6 @@
 		39AAE8C01AF7EC9D0085691E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				39ADE0AC1AFAB46D009E0935 /* Annotation.h */,
-				39ADE0AD1AFAB46D009E0935 /* Annotation.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
