@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "HTTPCommunication.h"
 
+
 @interface BikeShareData : NSObject
 
 @property (strong, nonatomic) NSNumber *stationId;

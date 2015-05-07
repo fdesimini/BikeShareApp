@@ -50,6 +50,16 @@
     //NEED this to
     _getBikeShareData = [[BikeShareData alloc]init];
     
+//    //Annotations
+//    CLLocationCoordinate2D annotationCoordinate = CLLocationCoordinate2DMake(35.6833, 139.6833);
+//    //Configure annotation
+//    self.annotation.coordinate = annotationCoordinate;
+//    [self.mapView addAnnotation:self.annotation];
+//    //configure annotation
+//    [self.mapView setCenterCoordinate:self.annotation.coordinate animated:YES];
+  
+
+    
 }
 
 //This implementation allows you to zoom in on the map after launch

@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "BikeShareData.h"
+#import "Annotation.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>
 
@@ -19,5 +20,14 @@
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) BikeShareData *getBikeShareData;
+@property (nonatomic, strong) Annotation *annotation;
+
+
+//@property BOOL userLocationUpdated;
+////open maps
+////open in maps
+//-(void)openInAppleMaps:(id)sender;
+
+
 
 @end
