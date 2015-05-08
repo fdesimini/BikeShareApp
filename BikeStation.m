@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Eff Dee Productions. All rights reserved.
 //
 
-#import "Annotation.h"
+#import "BikeStation.h"
 
-@implementation Annotation
+@implementation BikeStation
 
 @end

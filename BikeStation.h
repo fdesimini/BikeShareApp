@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface Annotation : NSObject <MKAnnotation>
+@interface BikeStation : NSObject <MKAnnotation>
 
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readwrite, copy) NSString *title;
+
 
 @end

@@ -47,8 +47,23 @@
     self.mapView.showsUserLocation = YES;
     self.mapView.showsPointsOfInterest = YES;
 
-    //NEED this to
-    _getBikeShareData = [[BikeShareData alloc]init];
+    // Set Region
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(43.642566, -79.387057), span);
+    
+    [self.mapView setRegion:region];
+    
+    //NEED this to get annotations
+    self.bikeStationManager = [[BikeStationManager alloc]init];
+    
+    [self.bikeStationManager getData:^(NSArray *listOfStationsAgain) {
+        
+        for (BikeStation *bikeStation in listOfStationsAgain) {
+
+            [self.mapView addAnnotation:bikeStation];
+        }
+        
+    }];
     
 //    //Annotations
 //    CLLocationCoordinate2D annotationCoordinate = CLLocationCoordinate2DMake(35.6833, 139.6833);
@@ -62,17 +77,19 @@
     
 }
 
+
+
 //This implementation allows you to zoom in on the map after launch
 //didAddAnnotationViews is one of the delegate methods of the MKMapViewDelegate
-
--(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
-{
-    MKAnnotationView *annotationView = [views objectAtIndex:0];
-    id<MKAnnotation> mp=[annotationView annotation];
-    MKCoordinateRegion region=MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
-    
-    [mapView setRegion:region animated:YES];
-}
+//
+//-(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
+//{
+//    MKAnnotationView *annotationView = [views objectAtIndex:0];
+//    id<MKAnnotation> mp=[annotationView annotation];
+//    MKCoordinateRegion region=MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
+//    
+//    [mapView setRegion:region animated:YES];
+//}
 
 
 
