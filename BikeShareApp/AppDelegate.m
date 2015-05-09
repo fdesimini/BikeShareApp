@@ -21,7 +21,7 @@
     
     //MapViewController - this is where the map will be
     MapViewController *mapViewController = [[MapViewController alloc]init];
-    mapViewController.title = @"Bike Maps";
+    mapViewController.title = @"Bike Stations";
     mapViewController.view.backgroundColor = [UIColor orangeColor];
  // mapViewController.tabBarItem.image = [UIImage imageNamed:@"map_icon_30"];
  // [mapViewController.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -29,7 +29,7 @@
     
     //MoreInfoViewController - this is where we will have "more info"
     MoreInfoViewController *moreInfoViewController = [[MoreInfoViewController alloc]init];
-    moreInfoViewController.title = @"More Info";
+    moreInfoViewController.title = @"Hospitals";
     moreInfoViewController.view.backgroundColor = [UIColor redColor];
     
     

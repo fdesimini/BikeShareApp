@@ -29,7 +29,7 @@
 -(void)getData:(void(^)(NSArray *))success
 {
         NSURL *url = [NSURL URLWithString:@"http://www.bikesharetoronto.com/stations/json"];
-     [_http retrievURL:url successBlock:^(NSData * response) {
+     [self.http retrievURL:url successBlock:^(NSData * response) {
         NSError *error = nil;
         //deserialize the information we get from the api
         NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
@@ -45,7 +45,7 @@
          self.listOfBikeStationInstances = [[NSMutableArray alloc]init];
          for (NSDictionary *dictionaries in stationResult)
          {
-            //storing lat long
+            //storing lat long & other data
             NSNumber *latitude = dictionaries[@"latitude"]; // [dictionaries objectForKey:@"latitude"];
             NSNumber *longitude = dictionaries[@"longitude"];
              NSString *name = dictionaries[@"stationName"];
@@ -58,22 +58,15 @@
              
              [self.listOfBikeStationInstances addObject:bikeStation];
              
-             NSLog(@"%@ : (%f, %f)", bikeStation.title, bikeStation.coordinate.longitude, bikeStation.coordinate.latitude);
-             NSLog(@"%@", self.listOfBikeStationInstances);
+//             NSLog(@"%@ : (%f, %f)", bikeStation.title, bikeStation.coordinate.longitude, bikeStation.coordinate.latitude);
+//             NSLog(@"%@", self.listOfBikeStationInstances);
          }
         if (success) {
             success(self.listOfBikeStationInstances);
         }
              
              
-             
-             
-             
-             
-             
-             
-             
-//            //create an array of objects
+ //            //create an array of objects
 //             NSArray *myData = [NSMutableArray arrayWithObjects:latitude,longitude, nil];
 //             NSMutableArray *objectsOfObjects = [[NSMutableArray alloc]initWithArray:myData copyItems:YES];
 //             //debug this value

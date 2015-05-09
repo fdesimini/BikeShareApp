@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //self.tabbar image imagwithrendering
+    UIImage *moreIcon = [UIImage imageNamed:@"skull30x30"];
+    [self.tabBarItem.image = moreIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -20,8 +20,6 @@
 @property (strong, nonatomic) NSMutableArray *listOfBikeStationInstances;
 @property (strong,nonatomic) HTTPCommunication *http;
 
-
-
 @property (strong, nonatomic) NSString *stationName;
 @property (strong, nonatomic) NSNumber *latitude;
 @property (strong, nonatomic) NSNumber *longitude;

@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     //self.tabbar image imagwithrendering
-    UIImage *mapIcon = [UIImage imageNamed:@"map_icon_30"];
+    UIImage *mapIcon = [UIImage imageNamed:@"worldmap30x30"];
     [self.tabBarItem.image = mapIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     // this is where we will initilialize the mapView Object and add the subview
@@ -48,7 +48,7 @@
     self.mapView.showsPointsOfInterest = YES;
 
     // Set Region
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(43.642566, -79.387057), span);
     
     [self.mapView setRegion:region];
@@ -72,16 +72,42 @@
 //    [self.mapView addAnnotation:self.annotation];
 //    //configure annotation
 //    [self.mapView setCenterCoordinate:self.annotation.coordinate animated:YES];
-  
-
     
 }
 
-
+//get the custom pin to show on the map
+-(MKAnnotationView*)mapView:(MKMapView*)theMapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    
+    static NSString *reuseID=@"reuseID";
+    // if no pin can be dequeued then we create one
+    MKAnnotationView *view=[theMapView dequeueReusableAnnotationViewWithIdentifier:reuseID];
+    
+    
+    if(!view) {
+        view=[[MKPinAnnotationView alloc] initWithAnnotation:annotation
+                                             reuseIdentifier:reuseID];
+        view.canShowCallout=YES;
+        
+//        // Add a detail disclosure button to the RIGHT callout
+//        UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        rightButton.frame=CGRectMake(0, 0, 23, 23);
+//        view.rightCalloutAccessoryView = rightButton;
+        
+        //Add an image to the left call out
+        UIImageView *iconView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"oldschool30x30"]];
+        iconView.frame=CGRectMake(0, 0, 23, 23);
+        view.leftCalloutAccessoryView=iconView;
+        
+    }
+    view.image=[UIImage imageNamed:@"marker30x30"];
+    view.annotation=annotation;
+    return view;
+    
+}
 
 //This implementation allows you to zoom in on the map after launch
 //didAddAnnotationViews is one of the delegate methods of the MKMapViewDelegate
-//
+
 //-(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
 //{
 //    MKAnnotationView *annotationView = [views objectAtIndex:0];
@@ -90,8 +116,6 @@
 //    
 //    [mapView setRegion:region animated:YES];
 //}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
